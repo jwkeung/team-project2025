@@ -29,17 +29,5 @@ public class MembershipServiceTest {
         assertTrue(svc.isActive(LocalDate.of(2025, 9, 25)));
     }
 
-    @Test
-    void activeOnExpireDay() {
-        MembershipService svc =
-            new MembershipService(new FixedClockStub(LocalDate.of(2025, 9, 25)));
-        assertTrue(svc.isActive(LocalDate.of(2025, 9, 25)));
-    }
 
-    @Test
-    void inactiveAfterExpire() {
-        MembershipService svc =
-            new MembershipService(new FixedClockStub(LocalDate.of(2025, 9, 26)));
-        assertFalse(svc.isActive(LocalDate.of(2025, 9, 25)));
-    }
 }

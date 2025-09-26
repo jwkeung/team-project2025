@@ -13,6 +13,7 @@ class PaymentGatewayStub implements PaymentGateway {
 
     PaymentGatewayStub(boolean... scripted) {
         this.scripted = scripted;
+        // add a line
     }
 
     @Override
